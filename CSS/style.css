@@ -1,0 +1,10 @@
+.display{
+    background-color: black;
+    color: aliceblue;
+    /* display: inline; */
+}
+div{
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+}
