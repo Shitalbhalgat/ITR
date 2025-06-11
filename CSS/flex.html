@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>flexbox</title>
+    <style>
+       
+      .parent{
+            width:800px;
+            border:5px solid red;
+            display: flex;
+            margin:auto;
+            flex-wrap: wrap;
+            flex-direction:row;
+
+            /* flex-flow: wrap row; */
+            justify-content: space-between;
+            /* align-items:center;     */
+            gap: 2px;
+         }
+        .box{
+            background-color: bisque;
+            width:100px;
+            border:2px solid black;
+            /* margin: 5px; */
+            text-align: center;
+           
+        } 
+        /* #i1{
+            order: 1;
+            flex-grow: 1;
+            flex-shrink: 2;
+
+        } */
+
+        .main{
+            width:1000px;
+            /* height:500px; */
+            border:5px solid blanchedalmond;
+            display: flex;
+            /* flex-wrap: wrap; */
+            margin: auto;
+            justify-content:space-around;
+            align-items:center;
+        }
+        .child{
+            width:100px;
+            text-align: center;
+            padding: 3opx 0px;
+            border: 2px solid black;
+            box-shadow:0px 0px 10px 2px rgb(238, 15, 15)
+           
+        }
+
+        .child img{
+            width: 50px;
+            margin: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    
+   <div class="parent">
+   <div class="box" id="i1">1</div>
+   <div class="box">2</div>
+   <div class="box">3</div>
+   <div class="box">4</div>
+   <div class="box">5</div>
+   <div class="box">6</div>
+   <div class="box">7</div>
+   <div class="box">8</div>
+       
+   
+</div>
+<div class="main">
+    <div class="child"><img src="Screenshot 2024-10-12 115046.png" alt="htmllogo"><p>name</p></div>
+    <div class="child"><img src="Screenshot 2024-10-12 115046.png" alt="htmllogo"><p>name</p></div>
+    <div class="child"><img src="Screenshot 2024-10-12 115046.png" alt="htmllogo"><p>name</p></div>
+    <div class="child"><img src="Screenshot 2024-10-12 115046.png" alt="htmllogo"><p>name</p></div>
+    <div class="child"><img src="Screenshot 2024-10-12 115046.png" alt="htmllogo"><p>name</p></div>
+</div>
+
+
+
+</body>
+</html>
