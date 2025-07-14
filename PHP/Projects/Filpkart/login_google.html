@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f1f1f1;
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-container {
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            width: 350px;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        .login-container input[type="email"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-container input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background: #4285F4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .login-container input[type="submit"]:hover {
+            background: #3367d6;
+        }
+
+        .google-btn {
+            background: #db4437;
+            text-align: center;
+            padding: 12px;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            display: block;
+            margin-top: 20px;
+        }
+
+        .google-btn:hover {
+            background: #c23321;
+        }
+
+        .or {
+            text-align: center;
+            margin: 15px 0;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Login</h2>
+
+    <!-- Email/password form (optional if using Google only) -->
+    <form method="POST" action="your_login_handler.php">
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" value="Login">
+    </form>
+
+    <div class="or">or</div>
+
+    <!-- Google Login Button -->
+    <a class="google-btn" href="googlelogin.php">Login with Google</a>
+</div>
+
+</body>
+</html>
