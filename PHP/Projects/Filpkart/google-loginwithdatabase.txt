@@ -1,0 +1,138 @@
+<?php
+session_start();
+require 'vendor/autoload.php';
+require 'db.php'; 
+
+// Google OAuth setup
+$client = new Google_Client();
+$client->setClientId('YOUR_GOOGLE_CLIENT_ID');
+$client->setClientSecret('YOUR_GOOGLE_CLIENT_SECRET');
+$client->setRedirectUri('http://localhost/google-callback.php');
+$client->addScope('email');
+$client->addScope('profile');
+
+$google_login_url = $client->createAuthUrl();
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <h2>Login</h2>
+
+   
+    <form method="post" action="login-check.php">
+        <label>Email:</label><br>
+        <input type="email" name="email" required><br>
+
+        <label>Password:</label><br>
+        <input type="password" name="password" required><br><br>
+
+        <input type="submit" value="Login">
+    </form>
+
+    <p>OR</p>
+
+    <!-- GOOGLE LOGIN BUTTON -->
+    <a href="<?php echo htmlspecialchars($google_login_url); ?>">
+        <img src="https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png" alt="Login with Google">
+    </a>
+
+    <p>Don't have an account? <a href="register.php">Register</a></p>
+</body>
+</html>
+
+google-callback.php 
+<?php
+session_start();
+require_once 'vendor/autoload.php';
+
+$client = new Google_Client();
+$client->setClientId('YOUR_CLIENT_ID');
+$client->setClientSecret('YOUR_CLIENT_SECRET');
+$client->setRedirectUri('http://localhost/google-callback.php');
+
+$client->addScope("email");
+$client->addScope("profile");
+
+// Get token
+if (isset($_GET['code'])) {
+    $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
+
+    if (!isset($token['error'])) {
+        $client->setAccessToken($token['access_token']);
+
+        $oauth = new Google_Service_Oauth2($client);
+        $google_account_info = $oauth->userinfo->get();
+
+        $_SESSION['username'] = $google_account_info->name;
+        $_SESSION['email'] = $google_account_info->email;
+        $_SESSION['login_type'] = 'google';
+
+        header('Location: welcome.php');
+        exit();
+    } else {
+        echo "Google login error: " . htmlspecialchars($token['error']);
+    }
+}
+
+<?php
+session_start();
+require_once 'vendor/autoload.php';
+require 'db.php'; // Your mysqli_connect()
+
+$client = new Google_Client();
+$client->setClientId('YOUR_CLIENT_ID');
+$client->setClientSecret('YOUR_CLIENT_SECRET');
+$client->setRedirectUri('http://localhost/google-callback.php');
+
+$client->addScope("email");
+$client->addScope("profile");
+
+// If Google returned a code
+if (isset($_GET['code'])) {
+    $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
+
+    if (!isset($token['error'])) {
+        $client->setAccessToken($token['access_token']);
+
+        $oauth = new Google_Service_Oauth2($client);
+        $google_info = $oauth->userinfo->get();
+
+        $google_id = $google_info->id;
+        $name = mysqli_real_escape_string($conn, $google_info->name);
+        $email = mysqli_real_escape_string($conn, $google_info->email);
+
+        // Check if user exists
+        $check = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email' AND login_type = 'google'");
+        if (mysqli_num_rows($check) > 0) {
+            $user = mysqli_fetch_assoc($check);
+            $user_id = $user['id'];
+        } else {
+            // Insert new user
+            mysqli_query($conn, "INSERT INTO users (email, name, login_type, google_id) 
+                                 VALUES ('$email', '$name', 'google', '$google_id')");
+            $user_id = mysqli_insert_id($conn);
+        }
+
+        // Set session
+        $_SESSION['user_id'] = $user_id;
+        $_SESSION['username'] = $name;
+        $_SESSION['email'] = $email;
+        $_SESSION['login_type'] = 'google';
+
+        header('Location: welcome.php');
+        exit();
+    } else {
+        echo "Google login error: " . htmlspecialchars($token['error']);
+    }
+} else {
+    echo "No authorization code returned.";
+}
+?>
+
+
+
+
