@@ -1,0 +1,58 @@
+Mini Project: My Dream Startup
+Problem Statement
+
+Create a webpage titled "My Dream Startup" using HTML. The webpage should describe a startup company that you would like to establish in the future. The website must present the startup's vision, mission, services, target customers, future goals, and other important information in a well-structured format.
+
+The project should demonstrate your understanding of basic HTML concepts such as headings, paragraphs, comments, and text formatting tags.
+
+Objective
+
+To design a professional startup profile webpage using HTML and showcase your creativity while applying text formatting and content organization techniques.
+
+Requirements
+
+The webpage should include the following sections:
+
+1. Startup Introduction
+Startup Name
+Company Tagline
+Brief Introduction
+2. Vision
+Describe the long-term vision of your startup.
+3. Mission
+Explain the purpose and mission of the company.
+4. Products or Services
+List the products or services offered by the startup.
+Explain how they solve customer problems.
+5. Unique Features
+Highlight the features that make the startup different from competitors.
+6. Target Customers
+Describe the customers who will use your products or services.
+7. Investment and Growth Plan
+Mention startup funding requirements.
+Explain future expansion plans.
+8. Future Goals
+Describe where you want your startup to be in the next 5–10 years.
+9. Contact Information
+Email
+Phone Number
+Location
+
+
+Examples
+Highlight unique features using <mark>
+Show old investment and updated investment using <del> and <ins>
+Display CO₂ using <sub>
+Display growth formula such as Revenue² using <sup>
+Use <strong> for important business goals
+Use <em> for mission statements
+Additional Rules
+Use proper HTML document structure.
+Add comments for every major section.
+Use meaningful and creative content.
+Include at least:
+1 <h1>
+5 <h2>
+5 paragraphs
+Use all formatting tags at least once.
+Maintain proper indentation and readability.
