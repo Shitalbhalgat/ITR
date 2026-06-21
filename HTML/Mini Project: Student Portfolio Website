@@ -1,0 +1,42 @@
+Mini Project: Student Portfolio Website
+Problem Statement
+
+Create a Student Portfolio Website using HTML to showcase your personal, academic, and professional information. The website should act as a digital portfolio that introduces you, highlights your skills, achievements, projects, and provides contact details.
+
+The webpage must be developed using only the HTML concepts learned so far, including headings, paragraphs, comments, and text formatting tags.
+
+Objective
+
+To design a structured and well-formatted personal portfolio webpage that demonstrates your understanding of HTML basics and text formatting elements.
+
+Requirements
+
+The webpage should contain the following sections:
+
+1. Home Section
+Student Name
+Profile Title (e.g., Student, Developer, Designer)
+Welcome Message
+2. About Me
+Brief self-introduction
+Career objective
+Personal interests and hobbies
+3. Education
+Academic qualifications
+College/School details
+Current course and year
+4. Skills
+Technical Skills
+Soft Skills
+Areas of Interest
+5. Projects
+List at least 2 academic or personal projects
+Brief description of each project
+6. Achievements
+Certifications
+Awards
+Competitions participated in
+7. Contact Information
+Email Address
+Phone Number
+City/Location
