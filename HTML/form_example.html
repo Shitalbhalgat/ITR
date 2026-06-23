@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+</head>
+<body>
+
+<h1>Student Registration Form</h1>
+
+<form action="success.html" method="post" autocomplete="on">
+
+    <!-- Text -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter Full Name" required maxlength="30" autofocus>
+    <br><br>
+
+    <!-- Email -->
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"placeholder="abc@gmail.com"required>
+    <br><br>
+
+    <!-- Password -->
+    <label for="password">Password:</label>
+    <input type="password" id="password"name="password" minlength="8"  maxlength="12"required>
+    <br><br>
+
+    <!-- Number -->
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age"  min="18" max="60">
+    <br><br>
+
+    <!-- Date -->
+    <label>Date of Birth:</label>
+    <input type="date"  name="dob">
+    <br><br>
+
+    <!-- Time -->
+    <label>Preferred Time:</label>
+    <input type="time" name="time">
+    <br><br>
+
+    <!-- Color -->
+    <label>Favorite Color:</label>
+    <input type="color"name="color">
+    <br><br>
+
+    <!-- Range -->
+    <label>Experience (0-10 Years):</label>
+    <input type="range" min="0" max="10" value="5">
+    <br><br>
+
+    <!-- Radio -->
+    <label>Gender:</label>
+
+    <input type="radio" name="gender" value="male"checked>
+    Male
+
+    <input type="radio" name="gender" value="female">
+    Female
+    <br><br>
+
+    <!-- Checkbox -->
+    <label>Skills:</label>
+
+    <input type="checkbox" name="skills" value="html">
+    HTML
+
+    <input type="checkbox" name="skills" value="css">
+    CSS
+
+    <input type="checkbox" name="skills" value="java">
+    Java
+    <br><br>
+
+    <!-- Dropdown -->
+    <label>Course:</label>
+
+    <select name="course">
+        <option>Select Course</option>
+        <option>BCA</option>
+        <option>BSc</option>
+        <option selected>MCA</option>
+    </select>
+    <br><br>
+
+    <!-- Datalist -->
+    <label>City:</label>
+
+    <input type="text"list="cities">
+
+    <datalist id="cities">
+        <option value="Pune">
+        <option value="Mumbai">
+        <option value="Delhi">
+        <option value="Bangalore">
+    </datalist>
+    <br><br>
+
+    <!-- Textarea -->
+    <label>Address:</label><br>
+
+    <textarea rows="4" cols="30"   placeholder="Enter Address"></textarea>
+    <br><br>
+
+    <!-- File Upload -->
+    <label>Upload Resume:</label>
+
+    <input type="file"  accept=".pdf,.doc,.docx">
+    <br><br>
+
+    <!-- URL -->
+    <label>Portfolio URL:</label>
+
+    <input type="url"  placeholder="https://example.com">
+    <br><br>
+
+    <!-- Search -->
+    <label>Search:</label>
+
+    <input type="search"  placeholder="Search Here">
+    <br><br>
+
+    <!-- Readonly -->
+    <label>College:</label>
+
+    <input type="text"  value="XYZ College" readonly>
+    <br><br>
+
+    <!-- Disabled -->
+    <label>Student ID:</label>
+
+    <input type="text" value="101" disabled>
+    <br><br>
+
+    <!-- Hidden -->
+    <input type="hidden" name="role" value="student">
+
+    <!-- Buttons -->
+    <input type="submit" value="Register">
+
+    <input type="reset" value="Clear">
+
+    <input type="button" value="Click Me">
+
+</form>
+
+</body>
+</html>
