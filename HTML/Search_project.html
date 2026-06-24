@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Search Form</title>
+</head>
+<body>
+
+    <h1>Online Product Search</h1>
+
+    <form action="" method="get">
+
+        <label>Search Product:</label><br>
+        <input type="search"
+               name="product"
+               list="products"
+               placeholder="Search Products..."
+               required>
+
+        <datalist id="products">
+            <option value="Laptop">
+            <option value="Mouse">
+            <option value="Keyboard">
+            <option value="Monitor">
+            <option value="Printer">
+            <option value="Smartphone">
+        </datalist>
+
+        <br><br>
+
+        <label>Category:</label><br>
+        <select name="category">
+            <option>Electronics</option>
+            <option>Books</option>
+            <option>Fashion</option>
+            <option>Home Appliances</option>
+        </select>
+
+        <br><br>
+
+        <label>Price Range:</label><br>
+        <input type="range"
+               min="1000"
+               max="100000"
+               value="25000">
+        <br><br>
+
+        <label>Brand:</label><br>
+        <input type="text"
+               list="brands"
+               placeholder="Select Brand">
+
+        <datalist id="brands">
+            <option value="Dell">
+            <option value="HP">
+            <option value="Lenovo">
+            <option value="Apple">
+            <option value="Samsung">
+        </datalist>
+
+        <br><br>
+
+        <input type="submit" value="Search">
+        <input type="reset" value="Clear">
+
+    </form>
+
+</body>
+</html>

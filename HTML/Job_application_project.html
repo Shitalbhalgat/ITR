@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Application Form</title>
+</head>
+<body>
+
+    <h1>Job Application Form</h1>
+
+    <form action="" method="post">
+
+        <label>Full Name:</label><br>
+        <input type="text" name="fullname" required>
+        <br><br>
+
+        <label>Email:</label><br>
+        <input type="email" name="email" required>
+        <br><br>
+
+        <label>Mobile Number:</label><br>
+        <input type="tel" name="mobile">
+        <br><br>
+
+        <label>Position Applying For:</label><br>
+        <select name="position">
+            <option>Java Developer</option>
+            <option>Python Developer</option>
+            <option>Web Developer</option>
+            <option>Data Analyst</option>
+        </select>
+        <br><br>
+
+        <label>Experience (Years):</label><br>
+        <input type="range" min="0" max="15" value="2">
+        <br><br>
+
+        <label>Skills:</label><br>
+        <input type="checkbox"> Java
+        <input type="checkbox"> Python
+        <input type="checkbox"> HTML
+        <input type="checkbox"> CSS
+        <br><br>
+
+        <label>Portfolio Website:</label><br>
+        <input type="url"
+               placeholder="https://example.com">
+        <br><br>
+
+        <label>Upload Resume:</label><br>
+        <input type="file" accept=".pdf,.doc,.docx">
+        <br><br>
+
+        <label>Cover Letter:</label><br>
+        <textarea rows="5" cols="40"></textarea>
+        <br><br>
+
+        <input type="submit" value="Apply Now">
+        <input type="reset" value="Reset">
+
+    </form>
+
+</body>
+</html>
