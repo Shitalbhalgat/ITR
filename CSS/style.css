@@ -1,67 +1,15 @@
-p{
-    background-color: aqua;
-    /* display: inline; */
-}
-span{
-    background-color: aqua;
-   
-}
-/* *
-{
-    box-sizing:border-box;
-} */
+/* External CSS */
 
-.main{
-    height: 400px;
-    width: 400px; 
-    background-color:bisque;
-    border: 2px solid red;
-    text-align: center;
-    margin: 5px;
-    
-    }
-
-#d1
-{
-    width:100px;
-    height: 100px;
-    background-color:red;
-    position:relative;
-    border: 2px solid black;
-    /* top: 100px;
-    left: 100px; */
+body{
+    background-color: lightcyan;
 }
 
-#d2
-{
-        width:100px;
-        height: 100px;
-        background-color:chocolate;
-        /* position:absolute; */
-        border: 2px solid black;
-          /* top: 50px;
-         left: 50px; */
-} 
+h4{
+    color: purple;
+}
 
-#d3
-{
-        width:100px;
-        height: 100px;
-        background-color:brown;
-        /* position:fixed; */
-        border: 2px solid black;
-          /* top: 50px;
-         left: 50px; */
-         /* right: 20px;
-         bottom: 20px; */
-} 
-#d4
-{
-        width:100px;
-        height: 100px;
-        background-color:darkred;
-        position:sticky;
-        border: 2px solid black;
-          /* top: 20px;
-         left: 20px; */
-} 
+button{
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
