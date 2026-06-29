@@ -1,0 +1,95 @@
+<!-- CSS Colors are used to change the color of text, backgrounds, borders, and other HTML elements. 
+ They make webpages more attractive, readable, and visually appealing.
+ 
+Ways to Specify Colors in CSS
+  CSS provides several methods to define colors:
+Color Names: 1)HEX (Hexadecimal) : A HEX color begins with # followed by 6 hexadecimal digits.
+                                  Format
+                                    #RRGGBB
+                                    RR → Red
+                                    GG → Green
+                                    BB → Blue
+                                    Each pair ranges from 00 to FF.
+           2) RGB : RGB stands for Red, Green, Blue. It is specified using the rgb() function with three values ranging from 0 to 255.
+           3)RGBA : RGBA is an extension of RGB that includes an alpha channel for transparency.
+                    format
+                           rgba(red, green, blue, alpha)
+                           Alpha ranges from: 0 → Fully transparent ,1 → Fully visible
+           4)HSL : HSL stands for Hue, Saturation, Lightness. It is specified using the hsl() function.
+                   format
+                           hsl(hue, saturation, lightness)
+                           Hue ranges from 0 to 360 degrees.
+                           Saturation and Lightness are percentages. 
+           5)HSLA : HSLA is an extension of HSL that includes an alpha channel for transparency.
+                    format
+                           hsla(hue, saturation, lightness, alpha)
+                           Alpha ranges from: 0 → Fully transparent ,1 → Fully visible
+  -->
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>CSS Colors</title>
+
+<style>
+
+            body{
+                background-color:#F0F8FF;
+            }
+
+            h1{
+                color:red;
+            }
+
+            h2{
+                color:#0000FF;
+            }
+
+            p{
+                color:rgb(0,128,0);
+            }
+
+            div{
+                background-color:rgba(255,0,0,0.3);
+                padding:20px;
+            }
+
+            h3{
+                color:hsl(300,100%,40%);
+            }
+
+            button{
+                background-color:#4CAF50;
+                color:white;
+            }
+
+            img{
+                opacity:0.8;
+            }
+
+</style>
+
+</head>
+
+<body>
+
+        <h1>Color Name</h1>
+
+        <h2>HEX Color</h2>
+
+        <p>RGB Color Example</p>
+
+        <div>
+            RGBA Background Example
+        </div>
+
+        <h3>HSL Color Example</h3>
+
+        <button>Submit</button>
+
+        <br><br>
+
+        <img src="C:\Users\shita\OneDrive\Desktop\Itr\comments.png" width="300">
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!-- 1)Background Repeat : By default, the background image repeats both horizontally and vertically.
+Values
+Value	       Description
+repeat	    Default; repeats both horizontally and vertically
+repeat-x	Repeats horizontally only
+repeat-y	Repeats vertically only
+no-repeat	Displays the image only once 
+
+2)Background Shorthand Property :Instead of writing multiple background properties separately, you can combine them into one.
+Syntax
+         background: color image repeat attachment position;
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS_Background Example</title>
+
+<style>
+
+body{
+
+    background-color: #E6F7FF;
+
+    background-image: url("demo.png");
+
+    background-repeat: no-repeat;
+    
+    /* Specifies where the background image should appear. */
+    background-position: center top;
+
+    /* Controls the size of the background image. (cover(Covers the entire element),auto,content(Fits the image within the element)) */
+    background-size: cover;
+
+    /* Controls whether the background image scrolls with the page. */
+    background-attachment: fixed;
+
+}
+
+h1{
+
+    background-color: rgba(255,255,255,0.7);
+
+    text-align: center;
+
+}
+
+p{
+
+    background-color: rgba(255,255,255,0.6);
+
+    padding: 10px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Welcome to CSS Background</h1>
+
+<p>
+CSS background properties help create attractive webpages.
+</p>
+
+</body>
+</html>

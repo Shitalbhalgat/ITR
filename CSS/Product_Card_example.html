@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Product Card Layout</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            background-color: #f2f2f2;
+        }
+
+        h1{
+            text-align: center;
+            color: darkblue;
+        }
+
+        .card{
+
+            width:300px;
+            border:2px solid black;
+            background-color:white;
+            margin:20px;
+            text-align:center;
+
+        }
+
+        .card img{
+
+            width:250px;
+            height:180px;
+
+        }
+
+        .price{
+
+            color:red;
+            font-size:22px;
+            font-weight:bold;
+
+        }
+
+        button{
+
+            background-color:green;
+            color:white;
+            border:none;
+            padding:10px 20px;
+
+        }
+
+        /* Different margin for Card 2 */
+
+        #card2{
+
+            margin-top:60px;
+            margin-left:120px;
+
+        }
+
+        /* Center Card 3 */
+
+        #card3{
+
+            margin:auto;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h1>Online Shopping Store</h1>
+
+<!-- Card 1 -->
+
+<div class="card">
+
+    <img src="laptop.jpg" alt="Laptop">
+
+    <h2>HP Laptop</h2>
+
+    <p class="price">₹55,000</p>
+
+    <p>
+        Intel i5 Processor<br>
+        16GB RAM<br>
+        512GB SSD
+    </p>
+
+    <button>Buy Now</button>
+
+</div>
+
+<!-- Card 2 -->
+
+<div class="card" id="card2">
+
+    <img src="mobile.jpg" alt="Mobile">
+
+    <h2>Samsung Galaxy</h2>
+
+    <p class="price">₹32,999</p>
+
+    <p>
+        8GB RAM<br>
+        256GB Storage<br>
+        50MP Camera
+    </p>
+
+    <button>Buy Now</button>
+
+</div>
+
+<!-- Card 3 -->
+
+<div class="card" id="card3">
+
+    <img src="headphone.jpg" alt="Headphone">
+
+    <h2>Wireless Headphones</h2>
+
+    <p class="price">₹2,499</p>
+
+    <p>
+        Bluetooth 5.3<br>
+        Noise Cancellation<br>
+        40 Hours Battery
+    </p>
+
+    <button>Buy Now</button>
+
+</div>
+
+</body>
+</html>
