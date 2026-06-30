@@ -1,0 +1,95 @@
+<!-- The display property specifies how an HTML element is displayed on a webpage.
+      Every HTML element has a default display behavior.
+Types of Display
+Value	        Description
+block	        Element starts on a new line and takes the full available width (<div>,<h1>,<p>,<section>,<article> ,<header>,<footer>)
+inline	        Element stays on the same line and takes only the required width (<span>,<a>,<strong>,<em>)
+inline-block	Behaves like inline but allows width and height
+none	        Hides the element completely
+flex	        Creates a flexible layout
+grid	        Creates a grid layout         -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Property</title>
+
+<style>
+
+.block{
+
+    border:2px solid blue;
+
+    margin:10px;
+
+}
+
+.inline{
+
+    display:inline;
+
+    border:2px solid red;
+
+}
+
+.inlineblock{
+
+    display:inline-block;
+
+    width:120px;
+
+    border:2px solid green;
+
+    margin:10px;
+
+}
+
+.hide{
+
+    display:none;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>Block Example</h2>
+
+        <div class="block">HTML</div>
+
+        <div class="block">CSS</div>
+
+<hr>
+
+<h2>Inline Example</h2>
+
+            <div class="inline">HTML</div>
+
+            <div class="inline">CSS</div>
+
+            <div class="inline">JavaScript</div>
+
+<hr>
+
+<h2>Inline Block Example</h2>
+
+        <div class="inlineblock">HTML</div>
+
+        <div class="inlineblock">CSS</div>
+
+        <div class="inlineblock">Bootstrap</div>
+
+<hr>
+
+<h2>Display None</h2>
+
+<p class="hide">This paragraph is hidden.</p>
+
+<p>This paragraph is visible.</p>
+
+</body>
+
+</html>
