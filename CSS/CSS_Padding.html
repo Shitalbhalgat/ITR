@@ -1,0 +1,78 @@
+<!-- Padding is the space between the content and the border of an HTML element.
+     It increases the internal space inside an element, making the content look less crowded and more readable.
+
+**Padding Properties**
+
+Property	Description
+
+padding	       Sets padding on all four sides
+padding-top	   Top padding
+padding-right	Right padding
+padding-bottom	Bottom padding
+padding-left	Left padding 
+
+for example
+1)padding: 10px 20px 30px 40px; sets the top padding to 10px, right padding to 20px, bottom padding to 30px, and left padding to 40px. 
+2)padding: 10px 20px; sets the top and bottom padding to 10px, and the left and right padding to 20px.
+3)padding: 10px; sets the padding on all four sides to 10px.
+4)padding: 10px 20px 30px; sets the top padding to 10px, the left and right padding to 20px, and the bottom padding to 30px.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>CSS Padding</title>
+
+<style>
+
+body{
+    font-family:Arial;
+}
+
+.box1{
+    border:3px solid blue;
+    padding:20px;
+    margin-bottom:20px;
+}
+
+.box2{
+    border:3px solid green;
+    padding-top:30px;
+    padding-left:40px;
+    margin-bottom:20px;
+}
+
+button{
+    background-color:green;
+    color:white;
+    border:none;
+    padding:12px 25px;
+}
+
+input{
+    padding:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="box1">
+    This box has equal padding on all sides.
+</div>
+
+<div class="box2">
+    This box has different padding values.
+</div>
+
+<input type="text" placeholder="Enter your name">
+
+<br><br>
+
+<button>Submit</button>
+
+</body>
+</html>
