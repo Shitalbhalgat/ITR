@@ -1,0 +1,86 @@
+<!-- 
+ The flex-direction property specifies the direction in which the flex items are arranged.
+ It works only on a Flex Container (the parent element).
+ | Value            | Description                                     |
+| ---------------- | ----------------------------------------------- |
+|row           | Items are arranged from left to right (Default) |
+|row-reverse   | Items are arranged from right to left           |
+|column        | Items are arranged from top to bottom           |
+|column-reverse| Items are arranged from bottom to top           |
+
+2)Justify_content
+justify-content property is used to align and distribute flex items along the Main Axis.
+If flex-direction: row, the main axis is horizontal.
+If flex-direction: column, the main axis is vertical.
+values of justify-content property:
+| Value            | Description                                     |
+| ---------------- | ----------------------------------------------- |
+| flex-start       | Items are aligned to the start of the main axis |
+| flex-end         | Items are aligned to the end of the main axis   |
+| center           | Items are centered along the main axis          |
+| space-between    | Items are distributed with equal space between |
+| space-around     | Items are distributed with equal space around   |
+| space-evenly     | Items are distributed with equal space even     |
+
+
+3)align-items
+The align-items property is used to align and distribute flex items along the Cross Axis.
+values of align-items property:
+| Value            | Description                                     |
+| ---------------- | ----------------------------------------------- |
+| flex-start       | Items are aligned to the start of the cross axis |
+| flex-end         | Items are aligned to the end of the cross axis   |
+| center           | Items are centered along the cross axis          |
+| stretch          | Items are stretched to fill the container      |
+
+4)flex-wrap
+The flex-wrap property specifies whether the flex items should wrap or not.
+
+  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.container{
+    width:800px;
+    height:300px;
+    border:5px solid red;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    /* justify-content:flex-start;
+    align-items:flex-start;
+    gap: 10px; */
+}
+.box{
+    width:100px;
+    height:100px;
+    background-color:orange;
+    border:2px solid black;
+    margin:10px;
+    text-align:center;
+    line-height:100px;
+    flex-grow:1;
+    /* flex-shrink: 1; */ */
+}
+
+</style>
+</head>
+
+<body>
+<div class="container">
+
+
+<div class="box">1</div>
+<div class="box">2</div>
+<div class="box">3</div>
+<div class="box">4</div>
+<div class="box">5</div>
+<div class="box">6</div>
+<div class="box">7</div>
+
+</div>
+</body>
+</html>
