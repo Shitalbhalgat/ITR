@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transition Timing Function</title>
+<style>
+
+.container{
+    width:700px;
+    margin:30px auto;
+}
+
+.box{
+    width:100px;
+    height:50px;
+    background:lightblue;
+    margin:20px 0;
+    text-align:center;
+    line-height:50px;
+    border:2px solid black;
+
+    transition-property:transform;
+    transition-duration:3s;
+}
+
+.container:hover .linear{
+    transform:translateX(500px);
+    transition-timing-function:linear;
+}
+
+.container:hover .ease{
+    transform:translateX(500px);
+    transition-timing-function:ease;
+}
+
+.container:hover .easein{
+    transform:translateX(500px);
+    transition-timing-function:ease-in;
+}
+
+.container:hover .easeout{
+    transform:translateX(500px);
+    transition-timing-function:ease-out;
+}
+
+.container:hover .easeinout{
+    transform:translateX(500px);
+    transition-timing-function:ease-in-out;
+}
+
+</style>
+</head>
+
+<body>
+
+<h2 align="center">Transition Timing Function Demo</h2>
+
+<p align="center">
+Move your mouse inside the red border.
+</p>
+
+<div class="container" style="border:3px solid black;padding:20px;">
+
+<div class="box linear">Linear</div>
+
+<div class="box ease">Ease</div>
+
+<div class="box easein">Ease-In</div>
+
+<div class="box easeout">Ease-Out</div>
+
+<div class="box easeinout">Ease-In-Out</div>
+
+</div>
+
+</body>
+</html>

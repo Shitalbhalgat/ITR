@@ -1,0 +1,47 @@
+<!-- A transition creates a smooth animation when a CSS property changes.
+Transition Properties
+| Property                   | Purpose                                           |
+| ---------------------------| ------------------------------------------------- |
+| transition-property        | Property to animate                               |
+| transition-duration        | Animation time                                    |
+| transition-delay           | Wait before starting                              |
+| transition-timing-function | Speed pattern (ease, linear, ease-in, etc.)       |
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transition example</title>
+<style>
+
+    button{
+        background:blue;
+        color:white;
+        padding:15px 30px;
+        border:none;
+        font-size:20px;
+
+        transition-property:background-color;
+        transition-duration:1s;
+        transition-delay:0s;
+        transition-timing-function:ease;
+/*         
+        transition:background-color 1s; */
+
+    }
+    button:hover{
+        background:red;
+    }
+
+   
+
+</style>
+</head>
+
+<body>
+
+    <button>Book Now</button>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!-- The box-shadow property adds one or more shadows around an HTML element.
+syntax
+box-shadow: horizontal vertical blur spread color;
+Meaning of Each Value
+box-shadow: 10px 10px 5px 2px gray;
+
+| Value| Meaning |
+| -----| ------------------------- |
+| 10px | Horizontal shadow (Right) |
+| 10px | Vertical shadow (Down) |
+| 5px | Blur effect |
+| 2px | Spread of shadow |
+| gray | Shadow color | -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Box Shadow Demo</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+
+        .box {
+
+            width: 250px;
+            height: 150px;
+            background: lightblue;
+            margin: 50px auto;
+            line-height: 150px;
+            font-size: 25px;
+
+            transition: 0.5s;
+            box-shadow: 10px 0px black; /* shadows on right side  */
+            
+            box-shadow:0px 10px black; /* shadows on bottom side  */
+
+            box-shadow:10px 10px black; /* shadows on right bottom side  */
+
+            box-shadow:10px 10px 5px black; /* shadows on right bottom side with blur effect  */
+         
+            box-shadow:10px 10px 5px 5px black; /* shadows on right bottom side with blur effect and spread effect  */
+        
+        }
+
+        .box:hover {
+
+            transform: translateY(-10px);
+
+            box-shadow: 20px 20px 25px 10px black;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>CSS Box Shadow Demo</h1>
+
+    <div class="box">
+        Box Shadow
+    </div>
+
+</body>
+
+</html>

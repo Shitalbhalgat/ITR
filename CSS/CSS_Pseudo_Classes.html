@@ -1,0 +1,159 @@
+A pseudo-class is used to define the special state of an HTML element.
+| Pseudo-Class  | Use                      |
+| --------------| ------------------------ |
+| :hover       | Mouse over               |
+| :active      | While clicking           |
+| :focus       | Input field selected     |
+| :visited     | Visited link             |
+| :link        | Unvisited link           |
+| :first-child | First child element      |
+| :last-child  | Last child element       |
+| :nth-child() | Select child by position |
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Pseudo Classes Demo</title>
+
+<style>
+
+/* Heading */
+h1:hover{
+    color:red;
+}
+
+/* Links */
+a:link{
+    color:blue;
+}
+
+a:visited{
+    color:purple;
+}
+
+a:hover{
+    color:red;
+}
+
+a:active{
+    color:green;
+}
+
+/* Button */
+button{
+    background:blue;
+    color:white;
+    padding:10px 20px;
+    border:none;
+    cursor:pointer;
+}
+
+button:hover{
+    background:orange;
+}
+
+button:active{
+    background:red;
+}
+
+/* Input Box */
+input{
+    padding:10px;
+    margin-top:10px;
+}
+
+input:focus{
+    border:3px solid blue;
+    background:lightyellow;
+}
+
+/* List */
+li:first-child{
+    color:red;
+    font-weight:bold;
+}
+
+li:last-child{
+    color:green;
+    font-weight:bold;
+}
+
+li:nth-child(3){
+    color:blue;
+    font-size:20px;
+}
+
+/* Checkbox */
+input:checked{
+    width:20px;
+    height:20px;
+}
+
+/* Required Field */
+input:required{
+    border:2px solid red;
+}
+
+/* Disabled Field */
+input:disabled{
+    background:lightgray;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>CSS Pseudo Classes Demo</h1>
+
+<hr>
+
+<h2>1. Links</h2>
+
+<a href="https://www.google.com" target="_blank">Google</a><br><br>
+
+<a href="https://www.wikipedia.org" target="_blank">Wikipedia</a>
+
+<hr>
+
+<h2>2. Button</h2>
+
+<button>Click Me</button>
+
+<hr>
+
+<h2>3. Input Box</h2>
+
+<input type="text" placeholder="Enter Name" required>
+
+<br><br>
+
+<input type="text" placeholder="Disabled" disabled>
+
+<hr>
+
+<h2>4. List Example</h2>
+
+<ul>
+
+<li>HTML</li>
+
+<li>CSS</li>
+
+<li>JavaScript</li>
+
+<li>Bootstrap</li>
+
+<li>React</li>
+
+</ul>
+
+<hr>
+
+<h2>5. Checkbox</h2>
+
+<input type="checkbox"> I Agree
+
+</body>
+</html>

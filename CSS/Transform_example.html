@@ -1,0 +1,93 @@
+<!-- A Transform changes the appearance or position of an element.
+
+It can:Move an element ,Rotate an element,Increase or decrease its size ,Tilt (skew) an element
+
+Types of Transform
+translate() – Move
+rotate() – Rotate
+scale() – Increase/Decrease Size
+skew() – Tilt -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transform_example</title>
+<style>
+
+         .container{
+            display:flex;
+            justify-content:space-around;
+            margin-top:50px;
+        }
+        .box1{
+            width:150px;
+            height:150px;
+            background:orange;
+            text-align:center;
+            line-height:150px;
+            transition:0.5s ease; 
+        
+        }
+
+        .box1:hover{
+            transform:translate(100px,50px);
+        }
+
+        .box2{
+            width:150px;
+            height:150px;
+            background:lightblue;
+            text-align:center;
+            line-height:150px;
+            transition:0.5s;
+        }
+
+        .box2:hover{
+            transform:rotate(45deg);
+        }
+
+        .box3{
+            width:150px;
+            height:150px;
+            background:lightgreen;
+            text-align:center;
+            line-height:150px;
+            transition:0.5s;
+        }
+
+        .box3:hover{
+            transform:scale(1.5);
+        }
+        .box4{
+            width:150px;
+            height:150px;
+            background:lightpink;
+            text-align:center;
+            line-height:150px;
+            transition:0.5s;
+        }
+        .box4:hover{
+            transform:skew(20deg,20deg);
+        }
+
+</style>
+</head>
+
+<body>
+
+    <div class="container">
+     <div class="box1">
+        Move
+     </div>
+     <div class="box2">
+        Rotate
+     </div>
+      <div class="box3">
+        Scale
+      </div>
+      <div class="box4">
+        Skew
+      </div>
+    </div>
+</body>
+</html>

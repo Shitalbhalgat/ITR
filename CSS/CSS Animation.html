@@ -1,0 +1,87 @@
+<!-- CSS Animation allows an element to change its style gradually using @keyframes.
+syntax:
+.box{
+    animation: moveBox 3s;
+}
+
+@keyframes moveBox{
+
+    from{
+    }
+
+    to{
+        ...
+    }
+
+} -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Animation</title>
+<style>
+        .box{
+            width:120px;
+            height:120px;
+            background:red;
+
+            animation-name:colorChange;
+            animation-duration:4s;
+            animation-iteration-count:infinite;
+            animation-direction:alternate;
+            animation-timing-function:linear;
+            animation-delay:0s;
+
+            /* Shorthand for all animation properties */
+            /* animation:colorChange 4s infinite; */
+
+        }
+
+        @keyframes colorChange{
+
+        0%{
+        background:red;
+        }
+
+        50%{
+        background:yellow;
+        }
+
+        100%{
+        background:green;
+        }
+    }
+     .circle{
+
+            width:80px;
+            height:80px;
+            border:8px solid lightgray;
+            border-top:8px solid blue;
+            border-radius:50%;
+            animation:spin 1s linear infinite;
+         }
+
+            @keyframes spin{
+
+            from{
+            transform:rotate(0deg);
+            }
+
+            to{
+            transform:rotate(360deg);
+            }
+
+        }
+
+</style>
+
+</head>
+
+<body>
+
+      <div class="box"></div>
+  <br><br><br>
+        <div class="circle"></div>
+
+</body>
+</html>
