@@ -1,0 +1,110 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animated Cards</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f7fc;
+        }
+
+        .space {
+            height: 70vh;
+            display: grid;
+            place-items: center;
+            font-size: 30px;
+        }
+
+        .cards {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 30px;
+        }
+
+        .card {
+            background: white;
+            width: 220px;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px #ccc;
+
+            opacity: 0;
+            transform: translateY(80px);
+
+            animation: slideUp linear forwards;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+        }
+
+        .card:nth-child(2) {
+            animation-range: entry 10% cover 50%;
+        }
+
+        .card:nth-child(3) {
+            animation-range: entry 20% cover 60%;
+        }
+
+        @keyframes slideUp {
+          from{
+            opacity :0;
+            transform: translateY(0);
+            filter:blur(10px)
+
+          }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+                fil
+            }
+        }
+
+        .card h2 {
+            color: #1769aa;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="space">
+        Scroll Down
+    </div>
+
+    <section class="cards">
+
+        <div class="card">
+            <h2>HTML</h2>
+            <p>HTML creates the structure of a web page.</p>
+        </div>
+
+        <div class="card">
+            <h2>CSS</h2>
+            <p>CSS styles the web page and adds animations.</p>
+        </div>
+
+        <div class="card">
+            <h2>JavaScript</h2>
+            <p>JavaScript adds interaction to a web page.</p>
+        </div>
+
+    </section>
+
+    <div class="space">
+        End
+    </div>
+
+</body>
+</html>
+```
