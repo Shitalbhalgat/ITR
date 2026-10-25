@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blinking Text</title>
+
+    <style>
+        h1 {
+            color: red;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+         h2 {
+            animation: colorChange 3s infinite;
+        }
+
+        @keyframes colorChange {
+            0% {
+                color: red;
+            }
+
+            25% {
+                color: blue;
+            }
+
+            50% {
+                color: green;
+            }
+
+            75% {
+                color: orange;
+            }
+
+            100% {
+                color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to CSS Animation!</h1>
+    <h2>Welcome to CSS!</h2>
+
+</body>
+</html>
