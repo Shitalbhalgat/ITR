@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scroll Animation</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            height: 8px;
+            width: 100%;
+
+            background-color: red;
+
+            transform: scaleX(0);
+            transform-origin: left;
+
+            animation: progressAnimation linear;
+            animation-timeline: scroll(root block);
+        }
+
+        @keyframes progressAnimation {
+            to {
+                transform: scaleX(1);
+            }
+        }
+
+        .content {
+            padding: 30px;
+            height: 2000px;
+            background: linear-gradient(white, lightblue);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="progress"></div>
+
+    <div class="content">
+        <h1>CSS Scroll Animation</h1>
+
+        <p>Scroll down the page to see the progress bar.</p>
+    </div>
+
+</body>
+</html>
