@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Units Examples</title>
+
+    <style>
+        /* General CSS */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+            color: #222;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: #1769aa;
+            color: white;
+            padding: 20px;
+        }
+
+        .section {
+            background-color: white;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* 1. PX UNIT */
+        .px-box {
+            width: 200px;
+            height: 80px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 80px;
+        }
+
+        /* 2. PERCENTAGE UNIT */
+        .percent-parent {
+            width: 100%;
+            background-color: lightgray;
+        }
+
+        .percent-box {
+            width: 80%;
+            background-color: lightgreen;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        /* 3. EM UNIT */
+        .em-parent {
+            font-size: 20px;
+        }
+
+        .em-text {
+            font-size: 2em;
+        }
+
+        /* 4. REM UNIT */
+        html {
+            font-size: 16px;
+        }
+
+        .rem-text {
+            font-size: 2rem;
+        }
+
+        /* 5. VW UNIT */
+        .vw-box {
+            width: 50vw;
+            padding: 15px 0;
+            background-color: lightcoral;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        /* 6. VH UNIT */
+        .vh-box {
+            height: 20vh;
+            background-color: lightyellow;
+            display: grid;
+            place-items: center;
+        }
+
+        /* 7. DVH UNIT */
+        .dvh-box {
+            min-height: 20dvh;
+            background-color: #d8c8ff;
+            display: grid;
+            place-items: center;
+        }
+
+        /* 8. FR UNIT */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 10px;
+        }
+
+        .grid-item {
+            background-color: lightblue;
+            padding: 20px;
+            text-align: center;
+        }
+
+      
+        /* 9. DEG UNIT */
+        .rotate-box {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            display: grid;
+            place-items: center;
+            transform: rotate(15deg);
+            margin: 30px;
+        }
+
+        /* 10. S UNIT */
+        .animated-box {
+            width: 100px;
+            height: 60px;
+            background-color: steelblue;
+            animation: move 3s infinite alternate;
+        }
+
+        @keyframes move {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(200px);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Units Demonstration</h1>
+
+    <!-- 1. PX -->
+    <div class="section">
+        <h2>1. PX - Pixels</h2>
+        <p>Width is fixed at 200 pixels.</p>
+
+        <div class="px-box">
+            200px wide
+        </div>
+    </div>
+
+    <!-- 2. PERCENTAGE -->
+    <div class="section">
+        <h2>2. Percentage (%)</h2>
+        <p>The box occupies 80% of its parent's content width.</p>
+
+        <div class="percent-parent">
+            <div class="percent-box">
+                80% Width
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. EM -->
+    <div class="section">
+        <h2>3. EM</h2>
+        <p>The parent font size is 20px. The child uses 2em.</p>
+
+        <div class="em-parent">
+            <p class="em-text">
+                This text is 40px.
+            </p>
+        </div>
+    </div>
+
+    <!-- 4. REM -->
+    <div class="section">
+        <h2>4. REM</h2>
+        <p>The root font size is 16px. The heading uses 2rem.</p>
+
+        <p class="rem-text">
+            This text is 32px.
+        </p>
+    </div>
+
+    <!-- 5. VW -->
+    <div class="section">
+        <h2>5. VW - Viewport Width</h2>
+        <p>The box width is 50% of the viewport width.</p>
+
+        <div class="vw-box">
+            50vw
+        </div>
+    </div>
+
+    <!-- 6. VH -->
+    <div class="section">
+        <h2>6. VH - Viewport Height</h2>
+        <p>The box height is 20% of the viewport height.</p>
+
+        <div class="vh-box">
+            20vh
+        </div>
+    </div>
+
+    <!-- 7. DVH -->
+    <div class="section">
+        <h2>7. DVH - Dynamic Viewport Height</h2>
+        <p>The minimum height is 20% of the dynamic viewport height.</p>
+
+        <div class="dvh-box">
+            20dvh minimum height
+        </div>
+    </div>
+
+    <!-- 8. FR -->
+    <div class="section">
+        <h2>8. FR - Fraction</h2>
+        <p>The columns use a 2:1 ratio.</p>
+
+        <div class="grid-container">
+            <div class="grid-item">
+                2fr
+            </div>
+
+            <div class="grid-item">
+                1fr
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 9. DEG -->
+    <div class="section">
+        <h2>9. DEG - Degrees</h2>
+        <p>The box is rotated by 15 degrees.</p>
+
+        <div class="rotate-box">
+            Box
+        </div>
+    </div>
+
+    <!-- 10. S -->
+    <div class="section">
+        <h2>10. S - Seconds</h2>
+        <p>The blue box moves for 3 seconds per animation cycle.</p>
+
+        <div class="animated-box"></div>
+    </div>
+
+</body>
+</html>

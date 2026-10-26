@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Switcher</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        /* Hide radio buttons */
+        input[type="radio"] {
+            display: none;
+        }
+
+        /* Language buttons */
+        .language label {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-right: 10px;
+            background: #ddd;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Highlight selected language */
+        #english:checked ~ .language label[for="english"],
+        #marathi:checked ~ .language label[for="marathi"] {
+            background: #1769aa;
+            color: white;
+        }
+
+        /* Hide language content by default */
+        .marathi {
+            display: none;
+        }
+
+        /* Show Marathi content when selected */
+        #marathi:checked ~ .content .english {
+            display: none;
+        }
+
+        #marathi:checked ~ .content .marathi {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="radio" name="lang" id="english" checked>
+    <input type="radio" name="lang" id="marathi">
+
+    <div class="language">
+        <label for="english">English</label>
+        <label for="marathi">मराठी</label>
+    </div>
+
+    <div class="content">
+        <div class="english">
+            <h1>Welcome to My Website</h1>
+            <p>This is my website.</p>
+            <button>Learn More</button>
+        </div>
+
+        <div class="marathi">
+            <h1>माझ्या वेबसाइटवर आपले स्वागत आहे</h1>
+            <p>ही माझी वेबसाइट आहे.</p>
+            <button>अधिक जाणून घ्या</button>
+        </div>
+    </div>
+
+</body>
+</html>
